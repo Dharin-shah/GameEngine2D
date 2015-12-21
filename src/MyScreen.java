@@ -1,11 +1,8 @@
 import java.awt.Color;
 import java.awt.Graphics2D;
 
-
 public class MyScreen extends Screen {
-
 	int x=0,y=0;
-	
 	
 	public MyScreen(ScreenController screenController) {
 		super(screenController);
@@ -33,5 +30,4 @@ public class MyScreen extends Screen {
 		g2d.fillRect(x, y, 20, 64);
 
 	}
-
 }

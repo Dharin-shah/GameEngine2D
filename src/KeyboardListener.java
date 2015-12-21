@@ -1,7 +1,7 @@
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
-
+/* Keyboard Controller Class */
 public class KeyboardListener implements KeyListener {
 
 	private boolean keys[] = new boolean[26];
@@ -21,13 +21,11 @@ public class KeyboardListener implements KeyListener {
 
 	}
 	
-	public boolean isKeyPressed(int key)
-	{
+	public boolean isKeyPressed(int key){
 		return keys[key];
 	}
 	
-	public boolean isKeyReleased(int key)
-	{
+	public boolean isKeyReleased(int key){
 		return !keys[key];
 	}
 

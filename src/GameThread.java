@@ -3,10 +3,10 @@ import java.awt.Graphics2D;
 import java.awt.RenderingHints;
 import javax.swing.JPanel;
 
+/* Single Threaded Game Engine */
+/* Game Thread Class contains the reference to the Game instance to be updated (accessible across functions) */
 public class GameThread extends JPanel implements Runnable {
-	/**
-	 * 
-	 */
+	
 	private static final long serialVersionUID = 1L;
 	private final Game game;
 	

@@ -1,12 +1,13 @@
 import javax.swing.JFrame;
-
-
+/* Game Class */
+/* Inherit this Class to create a Game */
 public class Game {
 	
 	private final JFrame window = new JFrame();
 	private GameThread gameThread;
 	private ScreenController screenController;
 
+	/* Window Configuration */
 	public Game(int windowX,int windowY,String title){
 		setGameWindow(windowX,windowY,title);
 		screenController=new ScreenController(this);
@@ -25,10 +26,12 @@ public class Game {
 		window.setVisible(true);
 	}
 
+	/* return this game's Screen Controller */
 	public ScreenController getScreenFactory(){
 		return this.screenController;
 	}
 	
+	/* return this game's Window Frame */
 	public JFrame getJFrame(){
 		return window;
 	}
