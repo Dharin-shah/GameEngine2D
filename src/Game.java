@@ -2,7 +2,7 @@ import javax.swing.JFrame;
 /* Game Class (has a Window) */
 /* Inherit this Class to create a Game */
 public class Game {
-	
+
 	private final JFrame window = new JFrame();
 	private GameThread gameThread;
 	private ScreenController screenController;
@@ -15,7 +15,7 @@ public class Game {
 		window.add(gameThread);
 		new Thread(gameThread).start();
 	}
-	
+
 	private void setGameWindow(int windowX,int windowY,String title) {
 		window.setSize(windowX, windowY);
 		window.setResizable(false);
@@ -30,7 +30,7 @@ public class Game {
 	public ScreenController getScreenController(){
 		return this.screenController;
 	}
-	
+
 	/* return this game's Window Frame */
 	public JFrame getJFrame(){
 		return window;
