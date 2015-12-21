@@ -1,0 +1,68 @@
+[1mdiff --git a/src/AbstractEntity.java b/src/AbstractEntity.java[m
+[1mindex c892a92..61b0ebb 100644[m
+[1m--- a/src/AbstractEntity.java[m
+[1m+++ b/src/AbstractEntity.java[m
+[36m@@ -1,12 +1,20 @@[m
+ [m
+ public abstract class AbstractEntity implements Entity {[m
+[31m- int posX,posY;[m
+[31m- int width,height;[m
+[32m+[m[32m private int posX,posY,width,height;[m
+[32m+[m[32m private boolean movable;[m
+  [m
+[32m+[m[41m [m	[32mpublic AbstractEntity(int posX,int posY,int width,int height,boolean movable){[m
+[32m+[m	[32m this.posX = posX;[m
+[32m+[m	[32m this.posY = posY;[m
+[32m+[m	[32m this.width = width;[m
+[32m+[m	[32m this.height = height;[m
+[32m+[m	[32m this.movable = movable;[m
+[32m+[m[41m [m	[32m}[m
+[32m+[m[41m 	[m
+ 	@Override[m
+ 	public boolean isMovable() {[m
+ 		// TODO Auto-generated method stub[m
+[31m-		return false;[m
+[32m+[m		[32mreturn movable;[m
+ 	}[m
+ [m
+ 	@Override[m
+[36m@@ -32,5 +40,24 @@[m [mpublic abstract class AbstractEntity implements Entity {[m
+ 		// TODO Auto-generated method stub[m
+ 		this.posY = posY;[m
+ 	}[m
+[32m+[m[41m	[m
+[32m+[m	[32m@Override[m
+[32m+[m	[32mpublic int getWidth(){[m
+[32m+[m		[32mreturn this.width;[m
+[32m+[m	[32m}[m
+[32m+[m[41m	[m
+[32m+[m	[32m@Override[m
+[32m+[m	[32mpublic int getHeight(){[m
+[32m+[m		[32mreturn this.height;[m[41m		[m
+[32m+[m	[32m}[m
+[32m+[m	[32m@Override[m
+[32m+[m	[32mpublic void setWidth(int width){[m
+[32m+[m		[32mthis.width = width;[m
+[32m+[m	[32m}[m
+[32m+[m[41m	[m
+[32m+[m	[32m@Override[m
+[32m+[m	[32mpublic void setHeight(int height){[m
+[32m+[m		[32mthis.height = height;[m
+[32m+[m	[32m}[m
+ [m
+ }[m
+[1mdiff --git a/src/Entity.java b/src/Entity.java[m
+[1mindex d10a829..87a499b 100644[m
+[1m--- a/src/Entity.java[m
+[1m+++ b/src/Entity.java[m
+[36m@@ -16,4 +16,9 @@[m [mpublic interface Entity {[m
+ 	public int getPosY();[m
+ 	public void setPosX(int posX);[m
+ 	public void setPosY(int posY);[m
+[32m+[m	[32mpublic void draw(Graphics2D g2d);[m
+[32m+[m	[32mpublic int getWidth();[m
+[32m+[m	[32mpublic int getHeight();[m
+[32m+[m	[32mpublic void setWidth(int height);[m
+[32m+[m	[32mpublic void setHeight(int width);[m
+ }[m
+\ No newline at end of file[m
