@@ -1,0 +1,8 @@
+master branch contains
+-src/
+----Game.java
+----GameThread.java
+----ScreenController.java
+----Screen.java
+----MyGame.java (Main Class testing Game Engine)
+----MyScreen.java (Custom Screen testing Game Engine)
