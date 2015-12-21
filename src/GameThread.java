@@ -4,7 +4,7 @@ import java.awt.RenderingHints;
 import javax.swing.JPanel;
 
 /* Single Threaded Game Engine */
-/* Game Thread Class contains the reference to the Game instance to be updated (accessible across functions) */
+/* Game Thread Class contains the reference to the Game instance to be refreshed (accessible across functions) */
 public class GameThread extends JPanel implements Runnable {
 	
 	private static final long serialVersionUID = 1L;
@@ -19,8 +19,8 @@ public class GameThread extends JPanel implements Runnable {
 	public void run() {
 		while(true){
 			try{
-				if(game.getScreenFactory().getCurrentScreen()!=null)
-					game.getScreenFactory().getCurrentScreen().onUpdate();
+				if(game.getScreenController().getCurrentScreen()!=null)
+					game.getScreenController().getCurrentScreen().onUpdate();
 				Thread.sleep(3);
 			}
 			catch(Exception e){
@@ -33,8 +33,8 @@ public class GameThread extends JPanel implements Runnable {
 		super.paint(g);
 		Graphics2D g2d=(Graphics2D)g;
 		g2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
-		if(game.getScreenFactory().getCurrentScreen()!=null)
-			game.getScreenFactory().getCurrentScreen().onDraw(g2d);
+		if(game.getScreenController().getCurrentScreen()!=null)
+			game.getScreenController().getCurrentScreen().onDraw(g2d);
 		repaint();
 	}
 

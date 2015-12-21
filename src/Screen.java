@@ -4,8 +4,7 @@ public abstract class Screen {
 	
 	private final ScreenController screenController;
 	
-	public Screen(ScreenController screenController)
-	{
+	public Screen(ScreenController screenController){
 		this.screenController=screenController;
 	}
 	

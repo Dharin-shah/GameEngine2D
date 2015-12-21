@@ -21,13 +21,12 @@ public class MyScreen extends Screen {
 		if(y>=600+64)
 			y=-64;
 		y++;
-		//y++;
 	}
 
 	@Override
 	public void onDraw(Graphics2D g2d) {
 		g2d.setColor(Color.black);
 		g2d.fillRect(x, y, 20, 64);
-
+		
 	}
 }

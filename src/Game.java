@@ -1,5 +1,5 @@
 import javax.swing.JFrame;
-/* Game Class */
+/* Game Class (has a Window) */
 /* Inherit this Class to create a Game */
 public class Game {
 	
@@ -27,7 +27,7 @@ public class Game {
 	}
 
 	/* return this game's Screen Controller */
-	public ScreenController getScreenFactory(){
+	public ScreenController getScreenController(){
 		return this.screenController;
 	}
 	
